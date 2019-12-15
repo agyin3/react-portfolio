@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import bgImg from 'https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true'
 
 export const HeaderContainer = styled.div`
     height: 10vh;
@@ -62,7 +61,7 @@ export const Copyright = styled.p`
 export const HomepageContainer = styled.div`
     padding:0;
     margin:0;
-    background: url(${bgImg}) no-repeat center center fixed;
+    background: url(https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
