@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bgImg from '/Users/buddyagyin/Desktop/react-portfolio/src/img/portfolio-bg.jpg'
+import bgImg from 'https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true'
 
 export const HeaderContainer = styled.div`
     height: 10vh;
