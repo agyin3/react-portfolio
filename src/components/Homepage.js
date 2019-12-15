@@ -1,13 +1,15 @@
 import React from 'react'
 import Header from './Header'
-import { HomepageContainer, HomepageHeading, HomepageText } from '../styled-components'
+import { HomepageContainer, HomepageHeading, HomepageText, HomePageHeader } from '../styled-components'
 
 const Homepage = () => {
     return(
 
         <HomepageContainer>
             <Header />
-            <HomepageText>Utah based <br/> front-end developer</HomepageText>
+            <HomePageHeader>
+                <HomepageText>Utah based <br/> front-end developer</HomepageText>
+            </HomePageHeader>
         </HomepageContainer>
     )
 }

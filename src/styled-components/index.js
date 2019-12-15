@@ -46,7 +46,8 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     height: 7vh;
 
 `
@@ -55,6 +56,7 @@ export const Copyright = styled.p`
     font-family: Raleway, sans-serif;
     color: #fff;
     font-size: 1rem;
+    align-self: flex-end;
 `
 
 export const HomepageContainer = styled.div`
@@ -66,11 +68,34 @@ export const HomepageContainer = styled.div`
     width: 100%;
 `
 
+export const HomePageHeader = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 80%;
+`
+
 export const HomepageText = styled.h1`
     color: #fff;
     font-family: 'Raleway', sans-serif;
     font-size: 3.6rem;
     text-shadow: 0 0 40px #000;
     text-align: center;
-    margin-top: 15%;
+    align-self: center;
+`
+
+export const ProjectsContainer = styled.div`
+    background: #413C58;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 5%;
+    font-size: 1rem;
+    line-height: 1.2;
+`
+
+export const ProjectsHeader = styled.h1`
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    padding: 2%;
 `
