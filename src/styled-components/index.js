@@ -47,15 +47,15 @@ export const FooterContainer = styled.div`
     align-items: center;
     padding-left: 2%;
     padding-right: 2%;
-    height: 7vh;
+    height: 10vh;
 
 `
 
 export const Copyright = styled.p`
     font-family: Raleway, sans-serif;
     color: #fff;
-    font-size: 1rem;
-    align-self: flex-end;
+    font-size: 1.3rem;
+    margin-bottom: 0;
 `
 
 export const HomepageContainer = styled.div`
@@ -96,5 +96,64 @@ export const ProjectsHeader = styled.h1`
     font-size: 3rem;
     color: #fff;
     margin: 0;
-    padding: 2%;
+    padding: 5%;
+`
+export const AboutMeContainer = styled.main`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+`
+
+export const AboutMeTopSection = styled.section`
+    display: flex;
+`
+
+export const AboutMePhoto = styled.div`
+    height: 100vh;
+    width: 50%;
+    background: url(https://github.com/agyin3/images/blob/master/portfolio/IMG_0224.JPG?raw=true);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+`
+
+export const AboutMeTextContainer = styled.div`
+    height: 100vh;
+    width: 50%;
+    background: #30343F;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+`
+
+export const AboutMeHeader = styled.h1`
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5rem;
+`
+
+export const AboutMeText = styled.p`
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.5rem;
+    text-align: justify;
+
+`
+
+export const AboutMeMiddleSection = styled.section`
+    height: 30vh;
+    background: #fafafa;
+    color: #30343F;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+`
+
+export const CurrentHeader = styled.h4`
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 7.75rem;
+    font-weight: bold;
 `

@@ -6,7 +6,7 @@ const Projects = () => {
     return(
         <ProjectsContainer>
             <ProjectsHeader>
-                Recent Projects
+                Check Out Some Of My Recent Work
             </ProjectsHeader>
             <ProjectsList />
         </ProjectsContainer>

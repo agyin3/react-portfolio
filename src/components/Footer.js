@@ -5,24 +5,22 @@ import { Navigation, NavLinks, FooterContainer, Copyright } from '../styled-comp
 const Footer = () => {
     return(
         <FooterContainer>
-            <Copyright>
-                &copy; 2019 Buddy Agyin
-            </Copyright>
+            <Copyright>&copy; 2019 Buddy Agyin</Copyright>
             <Navigation>
                 <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'github']} size='xs'/>
+                    <FontAwesomeIcon icon={['fab', 'github']} size='s'/>
                 </NavLinks>
                 <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='xs'/>
+                    <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='s'/>
                 </NavLinks>
                 <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'twitter']} size='xs'/>
+                    <FontAwesomeIcon icon={['fab', 'twitter']} size='s'/>
                 </NavLinks>
                 <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'instagram']} size='xs'/>
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size='s'/>
                 </NavLinks>
                 <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'codepen']} size='xs'/>
+                    <FontAwesomeIcon icon={['fab', 'codepen']} size='s'/>
                 </NavLinks>
             </Navigation>
         </FooterContainer>
