@@ -143,7 +143,7 @@ export const AboutMeText = styled.p`
 
 `
 
-export const AboutMeMiddleSection = styled.section`
+export const CurrentSection = styled.section`
     height: 30vh;
     background: #fafafa;
     color: #30343F;
@@ -156,4 +156,30 @@ export const CurrentHeader = styled.h4`
     font-family: 'Montserrat', sans-serif; 
     font-size: 7.75rem;
     font-weight: bold;
+`
+
+export const SkillsSection = styled.section`
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    height: 60vh;
+`
+
+export const SkillsDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    color: #30343F;
+
+    &:hover {
+        background: #f2f2f2;
+    }
+`
+
+export const SkillsTitle = styled.h5`
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 3.5rem;
+    font-weight: bolder;
 `

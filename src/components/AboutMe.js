@@ -9,6 +9,8 @@ import {
     AboutMeMiddleSection, 
     CurrentHeader 
 } from '../styled-components'
+import Current from './Current'
+import Skills from './Skills'
 
 const AboutMe = () => {
     return(
@@ -20,11 +22,8 @@ const AboutMe = () => {
                     <AboutMeText>I am a software engineer based out of Salt Lake City, Utah. Currently I'm a student at Lambda School working towards completing their full stack program. I love doing projects involving software development, mobile app creation, front-end/back-end dev, database/server management, and graphic design.</AboutMeText>
                 </AboutMeTextContainer>
             </AboutMeTopSection>
-            <AboutMeMiddleSection>
-                <CurrentHeader>
-                    10<sup>+</sup>
-                </CurrentHeader>
-            </AboutMeMiddleSection>
+            <Current />
+            <Skills />
         </AboutMeContainer>
     )
 }

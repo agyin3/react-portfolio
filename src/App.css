@@ -42,3 +42,13 @@
   margin: 0 auto;
   display: flex;
 }
+
+.skills-number {
+  color: #aaa;
+}
+
+.skills-text {
+  width: 70%;
+  font-size: 1.2rem;
+  text-align: justify;
+}
