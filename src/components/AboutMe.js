@@ -14,7 +14,7 @@ import Skills from './Skills'
 
 const AboutMe = () => {
     return(
-        <AboutMeContainer>
+        <AboutMeContainer id='about-me'>
             <AboutMeTopSection>
                 <AboutMePhoto />
                 <AboutMeTextContainer>

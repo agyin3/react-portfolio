@@ -4,7 +4,7 @@ import { ProjectsContainer, ProjectsHeader } from '../styled-components'
 
 const Projects = () => {
     return(
-        <ProjectsContainer>
+        <ProjectsContainer id='projects'>
             <ProjectsHeader>
                 Check Out Some Of My Recent Work
             </ProjectsHeader>
