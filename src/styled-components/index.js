@@ -227,4 +227,8 @@ export const SkillsTitle = styled.h5`
     font-family: 'Montserrat', sans-serif; 
     font-size: 3.5rem;
     font-weight: bolder;
+
+    @media (max-width: 800px) {
+        font-size: 3rem;
+    }
 `
