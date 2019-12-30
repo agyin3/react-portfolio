@@ -7,6 +7,15 @@ export const HeaderContainer = styled.div`
     align-items: center;
     background: #413C58;
     padding: 0 2%;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+        justify-content: center;
+        padding: 0 0;
+    }
 `
 
 export const Navigation = styled.ul`
@@ -15,6 +24,11 @@ export const Navigation = styled.ul`
     justify-content: space-around;
     align-items: center;
     font-family: Raleway, sans-serif;
+
+    @media (max-width: 800px) {
+        width: 80%;
+        padding: 0;
+    }
 `
 
 export const NavLinks = styled.a`
@@ -38,6 +52,10 @@ export const Heading = styled.h1`
         cursor: pointer;
         font-size: 2.2rem;
     }
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 `
 
 export const FooterContainer = styled.div`
@@ -48,6 +66,10 @@ export const FooterContainer = styled.div`
     padding-left: 2%;
     padding-right: 2%;
     height: 10vh;
+
+    @media (max-width: 800px) {
+        flex-direction: column-reverse;
+    }
 
 `
 
@@ -107,6 +129,10 @@ export const AboutMeContainer = styled.main`
 
 export const AboutMeTopSection = styled.section`
     display: flex;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `
 
 export const AboutMePhoto = styled.div`
@@ -116,6 +142,10 @@ export const AboutMePhoto = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
 `
 
 export const AboutMeTextContainer = styled.div`
@@ -129,6 +159,10 @@ export const AboutMeTextContainer = styled.div`
     align-items: flex-start;
     padding-left: 5%;
     padding-right: 5%;
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
 `
 
 export const AboutMeHeader = styled.h1`
@@ -163,6 +197,11 @@ export const SkillsSection = styled.section`
     justify-content: center;
     background: #fff;
     height: 60vh;
+
+    @media (max-width: 800px){
+        flex-direction: column
+        height: auto;
+    }
 `
 
 export const SkillsDiv = styled.div`
@@ -175,6 +214,12 @@ export const SkillsDiv = styled.div`
 
     &:hover {
         background: #f2f2f2;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 `
 
