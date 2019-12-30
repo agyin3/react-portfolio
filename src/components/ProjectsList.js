@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Image } from 'semantic-ui-react'
+import { Card, Image, Icon } from 'semantic-ui-react'
 import projects from '../projects'
 
 const ProjectsList = () => {
@@ -21,6 +21,16 @@ const ProjectsList = () => {
                             <Card.Description>
                                 {project.description}
                             </Card.Description>
+                        </Card.Content>
+                        <Card.Content extra>
+                            <a className='project-link' href={project.url}>
+                                <Icon name='globe' />
+                                View Project
+                            </a>
+                            <a className='project-link' href={project.github}>
+                                <Icon name='github' />
+                                View Github
+                            </a>
                         </Card.Content>
                     </Card>
                 })}
