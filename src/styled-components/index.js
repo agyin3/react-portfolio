@@ -16,6 +16,10 @@ export const HeaderContainer = styled.div`
         justify-content: center;
         padding: 0 0;
     }
+
+    @media (max-height: 500px) {
+        height: auto;
+    }
 `
 
 export const Navigation = styled.ul`
@@ -69,6 +73,10 @@ export const FooterContainer = styled.div`
 
     @media (max-width: 800px) {
         flex-direction: column-reverse;
+    }
+
+    @media (max-height: 500px) {
+        height: auto;
     }
 
 `
