@@ -2,6 +2,7 @@ import React from 'react';
 import { HeaderContainer, Navigation, NavLinks, Heading } from '../styled-components'
 
 const Header = () => {
+
     return (
         <HeaderContainer>
             <Heading>Buddy Agyin</Heading>

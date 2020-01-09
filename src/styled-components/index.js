@@ -7,6 +7,12 @@ export const HeaderContainer = styled.div`
     align-items: center;
     background: #413C58;
     padding: 0 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    opacity: 0.9;
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -93,7 +99,7 @@ export const HomepageContainer = styled.div`
     margin:0;
     background: url(https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true);
     background-size: cover;
-    backgroubd-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
