@@ -118,6 +118,10 @@ export const HomepageText = styled.h1`
     text-shadow: 0 0 40px #000;
     text-align: center;
     align-self: center;
+
+    @media(max-width: 500px) {
+        font-size: 3.2rem;
+    } 
 `
 
 export const ProjectsContainer = styled.div`
@@ -135,6 +139,10 @@ export const ProjectsHeader = styled.h1`
     color: #fff;
     margin: 0;
     padding: 5%;
+
+    @media(max-width: 500px) {
+        font-size: 2.6rem;
+    } 
 `
 export const AboutMeContainer = styled.main`
     width: 100%;
