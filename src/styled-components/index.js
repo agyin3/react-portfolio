@@ -123,7 +123,7 @@ export const HomepageText = styled.h1`
     margin: 0;
 
     @media(max-width: 500px) {
-        font-size: 3.8rem;
+        font-size: 3.4rem;
     } 
 `
 
@@ -144,7 +144,7 @@ export const ProjectsHeader = styled.h1`
     padding: 5%;
 
     @media(max-width: 500px) {
-        font-size: 3.4rem;
+        font-size: 3.2rem;
     } 
 `
 export const AboutMeContainer = styled.main`
