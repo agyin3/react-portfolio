@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <HeaderContainer>
-            <Heading>Buddy Agyin</Heading>
+            <Heading><a href='#'>Buddy Agyin</a></Heading>
             <Navigation>
                 <NavLinks href='#projects'>Projects</NavLinks>
                 <NavLinks href='#about-me'>About</NavLinks>
