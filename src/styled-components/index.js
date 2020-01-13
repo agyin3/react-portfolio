@@ -43,24 +43,24 @@ export const Navigation = styled.ul`
 
 export const NavLinks = styled.a`
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     color: #fff;
 
     &:hover {
         color: #EFD0CA;
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
 `
 
 export const Heading = styled.h1`
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: Lobster, cursive;
     color: #fff;
 
     &:hover {
         text-shadow: 0 0 20px #EFD0CA;
         cursor: pointer;
-        font-size: 2.2rem;
+        font-size: 3.4rem;
     }
 
     @media (max-width: 500px) {
@@ -90,7 +90,7 @@ export const FooterContainer = styled.div`
 export const Copyright = styled.p`
     font-family: Raleway, sans-serif;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 0;
 `
 
@@ -107,20 +107,23 @@ export const HomepageContainer = styled.div`
 
 export const HomePageHeader = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 80%;
 `
 
 export const HomepageText = styled.h1`
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    font-size: 3.6rem;
+    font-size: 4.4rem;
     text-shadow: 0 0 40px #000;
     text-align: center;
     align-self: center;
+    margin: 0;
 
     @media(max-width: 500px) {
-        font-size: 3.2rem;
+        font-size: 3.8rem;
     } 
 `
 
@@ -135,13 +138,13 @@ export const ProjectsContainer = styled.div`
 
 export const ProjectsHeader = styled.h1`
     font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
+    font-size: 3.6rem;
     color: #fff;
     margin: 0;
     padding: 5%;
 
     @media(max-width: 500px) {
-        font-size: 2.6rem;
+        font-size: 3.4rem;
     } 
 `
 export const AboutMeContainer = styled.main`
@@ -191,12 +194,12 @@ export const AboutMeTextContainer = styled.div`
 
 export const AboutMeHeader = styled.h1`
     font-family: 'Raleway', sans-serif;
-    font-size: 3.5rem;
+    font-size: 4.8rem;
 `
 
 export const AboutMeText = styled.p`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 1.5rem;
+    font-size: 2.1rem;
     text-align: justify;
 
 `
@@ -212,7 +215,7 @@ export const CurrentSection = styled.section`
 
 export const CurrentHeader = styled.h4`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 7.75rem;
+    font-size: 10.8rem;
     font-weight: bold;
 `
 
@@ -249,10 +252,10 @@ export const SkillsDiv = styled.div`
 
 export const SkillsTitle = styled.h5`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     font-weight: bolder;
 
     @media (max-width: 800px) {
-        font-size: 3rem;
+        font-size: 4.2rem;
     }
 `

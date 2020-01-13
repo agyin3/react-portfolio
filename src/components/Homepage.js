@@ -9,7 +9,8 @@ const Homepage = () => {
             <Header />
             <HomepageContainer>
                 <HomePageHeader>
-                    <HomepageText><Bounce cascade top>Utah based <br/> front-end developer</Bounce></HomepageText>
+                    <HomepageText><Bounce top cascade>Utah based</Bounce></HomepageText> 
+                    <HomepageText><Bounce top cascade>front-end developer</Bounce></HomepageText>
                 </HomePageHeader>
             </HomepageContainer>
         </>
