@@ -1,9 +1,11 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import { Card, Image, Icon } from 'semantic-ui-react'
 import projects from '../projects'
 
 const ProjectsList = () => {
     return(
+        <Fade bottom cascade>
         <div className='card-container'>
             <Card.Group stackable itemsPerRow={2}>
                 {projects.map(project => {
@@ -36,6 +38,7 @@ const ProjectsList = () => {
                 })}
             </Card.Group>
         </div>
+        </Fade>
     )
 }
 

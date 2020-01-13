@@ -1,8 +1,10 @@
 import React from 'react'
+import HeadShake from 'react-reveal/HeadShake'
 import { SkillsSection, SkillsDiv, SkillsTitle } from '../styled-components'
 
 const Skills = () => {
     return(
+        <HeadShake>
         <SkillsSection>
             <SkillsDiv>
             <SkillsTitle><span class="skills-number">01.</span> Student</SkillsTitle>
@@ -17,6 +19,7 @@ const Skills = () => {
             <p class="skills-text">When working on projects, I like to take a user-first approcah, ensuring that the end user will have a smooth and enjoyable time utilizing the website/app.</p>
             </SkillsDiv>
         </SkillsSection>
+        </HeadShake>
     )
 }
 
