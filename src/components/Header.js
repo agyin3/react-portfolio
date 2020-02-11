@@ -9,7 +9,7 @@ const Header = () => {
             <Navigation>
                 <NavLinks href='#projects'>Projects</NavLinks>
                 <NavLinks href='#about-me'>About</NavLinks>
-                <NavLinks href='#'>Contact</NavLinks>
+                <NavLinks href='https://buddyagyin.blog' target='_blank'>Blog</NavLinks>
             </Navigation>
         </HeaderContainer>
     )
