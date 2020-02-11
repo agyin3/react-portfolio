@@ -7,20 +7,17 @@ const Footer = () => {
         <FooterContainer>
             <Copyright>&copy; 2019 Buddy Agyin</Copyright>
             <Navigation>
-                <NavLinks>
+                <NavLinks href='http://github.com/agyin3' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'github']} size='s'/>
                 </NavLinks>
-                <NavLinks>
+                <NavLinks href='https://linkedin.com/in/buddy-agyin' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='s'/>
                 </NavLinks>
-                <NavLinks>
+                <NavLinks href='https://twitter.com/developer_buddy' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'twitter']} size='s'/>
                 </NavLinks>
-                <NavLinks>
+                <NavLinks href='https://instagram.com/justsomebuddy_' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'instagram']} size='s'/>
-                </NavLinks>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'codepen']} size='s'/>
                 </NavLinks>
             </Navigation>
         </FooterContainer>
