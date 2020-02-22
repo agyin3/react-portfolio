@@ -97,10 +97,6 @@ export const Copyright = styled.p`
 export const HomepageContainer = styled.div`
     padding:0;
     margin:0;
-    background: url(https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
 `
