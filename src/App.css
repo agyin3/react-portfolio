@@ -84,6 +84,10 @@ a:hover{
   }
 }
 
+.project-card {
+  bottom: -30rem;
+}
+
 .slide-in {
   bottom: 0;
   animation: slide-in 1s ease;

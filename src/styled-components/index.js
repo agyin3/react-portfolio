@@ -323,7 +323,6 @@ export const CardContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     position: relative;
-    bottom: -30rem;
     height: 100%;
     width: 100%;
     background: rgba(247,172,207,0.9);
