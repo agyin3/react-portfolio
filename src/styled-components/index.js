@@ -93,6 +93,10 @@ export const HomepageContainer = styled.div`
     height: 100vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
+
+    @media (max-width: 800px) {
+        height: 70vh;
+    }
 `
 
 export const HomePageHeader = styled.div`
