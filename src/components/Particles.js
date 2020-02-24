@@ -1,6 +1,5 @@
 import React from 'react'
 import Particle from 'react-particles-js'
-import { particlesConfig } from '../particlesjs-config.js'
 
 const Particles = () => {
     return(
@@ -18,13 +17,13 @@ const Particles = () => {
                         }
                       },
                       "color": {
-                        "value": "#ffffff"
+                        "value": "#FAF4DD"
                       },
                       "shape": {
                         "type": "triangle",
                         "stroke": {
                           "width": 0,
-                          "color": "#000000"
+                          "color": "#4D5061"
                         },
                         "polygon": {
                           "nb_sides": 3
@@ -58,7 +57,7 @@ const Particles = () => {
                       "line_linked": {
                         "enable": true,
                         "distance": 150,
-                        "color": "#efd0ca",
+                        "color": "#F7ACCF",
                         "opacity": 0.7135183670851577,
                         "width": 0.6413648243462091
                       },
