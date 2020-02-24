@@ -93,6 +93,10 @@ export const HomepageContainer = styled.div`
     height: 100vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
+
+    @media (max-width: 800px) {
+        height: 70vh;
+    }
 `
 
 export const HomePageHeader = styled.div`
@@ -124,7 +128,7 @@ export const ProjectsContainer = styled.div`
     padding-bottom: 5%;
     font-size: 1rem;
     line-height: 1.2;
-    min-height: 50rem;
+    min-height: 80vh;
 
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
 
@@ -153,7 +157,7 @@ export const AboutMeContainer = styled.main`
     background: #fff;
     padding-bottom: 5.5rem;
     width: 100%;
-    min-height: 50rem;
+    min-height: 80vh;
     font-family: 'Montserrat', sans-serif;
     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5.5rem), 0 100%);
 `
@@ -302,6 +306,10 @@ export const ProjectContainer = styled.div`
     background-repeat: no-repeat;
     overflow: hidden;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @media (max-width: 800px) {
         width: 80%;
         margin-bottom: 2rem;
@@ -315,7 +323,6 @@ export const CardContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     position: relative;
-    bottom: -30rem;
     height: 100%;
     width: 100%;
     background: rgba(247,172,207,0.9);

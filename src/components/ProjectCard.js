@@ -10,9 +10,11 @@ const ProjectCard = ({img, title, languages, description, url, github}) => {
         <ProjectContainer 
         src={img}
         onMouseEnter={() => hover(true)}
-        onMouseLeave={() => hover(false)}
         >
-            <CardContainer className={animate ? 'slide-in' : animate === '' ? '' : 'slide-out'}>
+            <CardContainer 
+            className={`project-card ${animate ? 'slide-in' : animate === '' ? '' : 'slide-out'}`}
+            onMouseLeave={() => hover(false)}
+            >
                 <div>
                     <CardHeader>{title}</CardHeader>
                     <CardSubHeader>{languages.map(lang => `${lang} `)}</CardSubHeader>
