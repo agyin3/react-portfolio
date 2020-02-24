@@ -124,7 +124,7 @@ export const ProjectsContainer = styled.div`
     padding-bottom: 5%;
     font-size: 1rem;
     line-height: 1.2;
-    min-height: 50rem;
+    min-height: 80vh;
 
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
 
@@ -153,7 +153,7 @@ export const AboutMeContainer = styled.main`
     background: #fff;
     padding-bottom: 5.5rem;
     width: 100%;
-    min-height: 50rem;
+    min-height: 80vh;
     font-family: 'Montserrat', sans-serif;
     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5.5rem), 0 100%);
 `
