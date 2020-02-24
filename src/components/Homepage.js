@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Particles from './Particles.js'
 import Bounce from 'react-reveal/Bounce'
-import { HomepageContainer, HomepageHeading, HomepageText, HomePageHeader } from '../styled-components'
+import { HomepageContainer, HomepageText, HomePageHeader } from '../styled-components'
 
 const Homepage = () => {
     return(
@@ -11,8 +11,8 @@ const Homepage = () => {
             <HomepageContainer>
                 <Particles />
                 <HomePageHeader>
-                    <HomepageText><Bounce top cascade>Utah based</Bounce></HomepageText> 
-                    <HomepageText><Bounce top cascade>front-end developer</Bounce></HomepageText>
+                    <HomepageText><Bounce top cascade>- Buddy Agyin -</Bounce></HomepageText> 
+                    <HomepageText><Bounce top cascade>Software and Web Developer</Bounce></HomepageText>
                 </HomePageHeader>
             </HomepageContainer>
         </>
