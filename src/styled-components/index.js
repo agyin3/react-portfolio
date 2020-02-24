@@ -306,6 +306,10 @@ export const ProjectContainer = styled.div`
     background-repeat: no-repeat;
     overflow: hidden;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @media (max-width: 800px) {
         width: 80%;
         margin-bottom: 2rem;
