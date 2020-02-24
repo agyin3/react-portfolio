@@ -10,6 +10,9 @@ const Footer = () => {
                 <NavLinks href='http://github.com/agyin3' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'github']} size='sm'/>
                 </NavLinks>
+                <NavLinks href='https://dev.to/developer_buddy' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'dev']} size='sm'/>
+                </NavLinks>
                 <NavLinks href='https://linkedin.com/in/buddy-agyin' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='sm'/>
                 </NavLinks>
