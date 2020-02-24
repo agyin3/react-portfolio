@@ -1,29 +1,27 @@
 import React from 'react'
 import { 
-    AboutMePhoto,
-    AboutMeTopSection, 
     AboutMeText,
     AboutMeContainer, 
-    AboutMeTextContainer, 
-    AboutMeHeader, 
-    AboutMeMiddleSection, 
-    CurrentHeader 
+    AvatarImage
 } from '../styled-components'
-import Current from './Current'
-import Skills from './Skills'
+import avatar from '../img/Avatar-Maker.png'
+import TypingEffect from 'react-typing-effect'
 
 const AboutMe = () => {
     return(
         <AboutMeContainer id='about-me'>
-            <AboutMeTopSection>
-                <AboutMePhoto />
-                <AboutMeTextContainer>
-                    <AboutMeHeader>Buddy Agyin</AboutMeHeader>
-                    <AboutMeText>I am a software engineer based out of Salt Lake City, Utah. Currently I'm a student at Lambda School working towards completing their full stack program. I love doing projects involving software development, mobile app creation, front-end/back-end dev, database/server management, and graphic design.</AboutMeText>
-                </AboutMeTextContainer>
-            </AboutMeTopSection>
-            <Current />
-            <Skills />
+            <AvatarImage src={avatar} />
+            <AboutMeText>Hi There!</AboutMeText>
+            <TypingEffect 
+                className='about-me-text'
+                text={[
+                    "My name is Buddy Agyin. I am a Full Stack Developer based in Salt Lake City.", 
+                    "I love working with Web technologies to build sites and apps.",
+                    "If you're looking for someone to help build your next great project, I'm your guy."
+                ]}
+                speed={125}
+                typingDelay={1500}
+            />
         </AboutMeContainer>
     )
 }

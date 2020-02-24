@@ -7,7 +7,7 @@ const Projects = () => {
     return(
         <ProjectsContainer id='projects'>
             <ProjectsHeader>
-                <Flip left cascade>Check Out Some Of My Recent Work</Flip>
+                <Flip left cascade>Check Out Some Of My <wbr/> Recent Work</Flip>
             </ProjectsHeader>
             <ProjectsList />
         </ProjectsContainer>

@@ -10,9 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
   box-sizing: border-box;
+  background-color: #FAF4DD;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

@@ -1,18 +1,13 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-    height: 10vh;
+    height: 12.5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #413C58;
+    background: rgb(48, 50, 61);
     padding: 0 2%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    opacity: 0.9;
+    margin-bottom: 0;
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -47,7 +42,7 @@ export const NavLinks = styled.a`
     color: #fff;
 
     &:hover {
-        color: #EFD0CA;
+        color: #F9C2DC;
         font-size: 2.5rem;
     }
 `
@@ -58,7 +53,7 @@ export const Heading = styled.h1`
     color: #fff;
 
     &:hover {
-        text-shadow: 0 0 20px #EFD0CA;
+        text-shadow: 0 0 20px #F9C2DC;
         cursor: pointer;
         font-size: 3.4rem;
     }
@@ -69,7 +64,7 @@ export const Heading = styled.h1`
 `
 
 export const FooterContainer = styled.div`
-    background: #1FA1F2;
+    background: #4D5061;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,14 +90,9 @@ export const Copyright = styled.p`
 `
 
 export const HomepageContainer = styled.div`
-    padding:0;
-    margin:0;
-    background: url(https://github.com/agyin3/images/blob/master/portfolio/portfolio-bg.jpg?raw=true);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
 `
 
 export const HomePageHeader = styled.div`
@@ -128,16 +118,24 @@ export const HomepageText = styled.h1`
 `
 
 export const ProjectsContainer = styled.div`
-    background: #413C58;
+    background: #30323D;
     text-align: center;
     margin-top: 0;
     padding-bottom: 5%;
     font-size: 1rem;
     line-height: 1.2;
+    min-height: 50rem;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
+
+    @media (max-width: 800px) {
+        padding: 5rem 0 8rem 0;
+    }
 `
 
 export const ProjectsHeader = styled.h1`
     font-family: 'Raleway', sans-serif;
+    line-height: 0.8;
     font-size: 3.6rem;
     color: #fff;
     margin: 0;
@@ -148,10 +146,16 @@ export const ProjectsHeader = styled.h1`
     } 
 `
 export const AboutMeContainer = styled.main`
-    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding-bottom: 5.5rem;
+    width: 100%;
+    min-height: 50rem;
     font-family: 'Montserrat', sans-serif;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5.5rem), 0 100%);
 `
 
 export const AboutMeTopSection = styled.section`
@@ -199,8 +203,10 @@ export const AboutMeHeader = styled.h1`
 
 export const AboutMeText = styled.p`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 2.1rem;
-    text-align: justify;
+    font-size: 2.8rem;
+    line-height: 0.8;
+    color: #F9C2DC;
+    font-weight: bolder;
 
 `
 
@@ -213,17 +219,30 @@ export const CurrentSection = styled.section`
     align-items: center; 
 `
 
-export const CurrentHeader = styled.h4`
+export const SkillsHeader = styled.h4`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 10.8rem;
+    font-size: 4.8rem;
     font-weight: bold;
+    text-align: center;
+    color: #30323D;
+`
+
+export const SkillsWarapper = styled.div`
+    dispaly: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    min-height: 70vh;
+    padding: 5% 0;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 5.5rem), 0 100%);
 `
 
 export const SkillsSection = styled.section`
     display: flex;
-    justify-content: center;
-    background: #fff;
-    height: 60vh;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    justify-content: space-around;
+    color: #30323D;
 
     @media (max-width: 800px){
         flex-direction: column
@@ -236,12 +255,8 @@ export const SkillsDiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #30323D;
     width: 33.33%;
-    color: #30343F;
-
-    &:hover {
-        background: #f2f2f2;
-    }
 
     @media (max-width: 800px) {
         width: 100%;
@@ -252,10 +267,96 @@ export const SkillsDiv = styled.div`
 
 export const SkillsTitle = styled.h5`
     font-family: 'Montserrat', sans-serif; 
-    font-size: 4.8rem;
+    font-size: 3.6rem;
     font-weight: bolder;
+    color: #30323D;
 
     @media (max-width: 800px) {
         font-size: 4.2rem;
+    }
+`
+
+export const AvatarImage = styled.img`
+    height: 25rem;
+`
+
+export const CardWrapper = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
+export const ProjectContainer = styled.div`
+    width: 30%;
+    height:25rem;
+    background: url(${props => props.src || ''});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+`
+
+export const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: -30rem;
+    height: 100%;
+    width: 100%;
+    background: rgba(247,172,207,0.9);
+    overflow: hidden:
+    cursor: pointer;
+`
+
+export const CardLink = styled.a`
+    font-size: 1.5rem;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: underline;
+        color: #30323D;
+    }
+`
+
+export const CardHeader = styled.h3`
+    font-size: 2.8rem;
+    color: #30323D;
+    margin-bottom: -2rem;
+
+    @media (min-width: 800px) and (max-width: 900px) {
+        font-size: 2rem;
+    }
+`
+export const CardSubHeader = styled.h4`
+    fonct-size: 2.2rem;
+    color: #30323D;
+
+    @media (min-width: 800px) and (max-width: 900px) {
+        font-size: 1.4rem;
+    }
+`
+
+export const CardText = styled.p`
+    font-size: 1.8rem;
+    color: #30323D;
+
+    @media (min-width: 800px) and (max-width: 900px) {
+        font-size: 1.4rem;
     }
 `
