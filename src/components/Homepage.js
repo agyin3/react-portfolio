@@ -12,7 +12,7 @@ const Homepage = () => {
                 <Particles />
                 <HomePageHeader>
                     <HomepageText><Bounce top cascade>- Buddy Agyin -</Bounce></HomepageText> 
-                    <HomepageText><Bounce top cascade>Software and Web Developer</Bounce></HomepageText>
+                    <HomepageText><Bounce top cascade>Software and Web <wbr /> Developer</Bounce></HomepageText>
                 </HomePageHeader>
             </HomepageContainer>
         </>
