@@ -1,25 +1,32 @@
 import React from 'react'
 import HeadShake from 'react-reveal/HeadShake'
-import { SkillsSection, SkillsDiv, SkillsTitle } from '../styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { SkillsSection, SkillsDiv, SkillsTitle, SkillsHeader, SkillsWarapper } from '../styled-components'
+
+const icons = [
+    {name: 'html5', title: 'HTML'}, 
+    {name: 'css3-alt', title: 'CSS'}, 
+    {name: 'js-square', title: 'JavaScript'}, 
+    {name: 'react', title: 'ReactJs'}, 
+    {name: 'node-js', title: 'NodeJs'}
+]
 
 const Skills = () => {
     return(
-        <HeadShake>
-        <SkillsSection>
-            <SkillsDiv>
-            <SkillsTitle><span className="skills-number">01.</span> Student</SkillsTitle>
-            <p className="skills-text">Before anything else, I consider myself a student of software engineering. I'm always looking for resources that will push my skills and knowledge base to the next level.</p>
-            </SkillsDiv>
-            <SkillsDiv>
-            <SkillsTitle><span className="skills-number">02.</span> Languages</SkillsTitle>
-            <p className="skills-text">I am proficient in the following languages and frameworks: HTML, CSS, LESS, Javascript, JQuery, and ReactJS. I plan on learning the following: Java, Python, VueJS, and AngularJS.</p>
-            </SkillsDiv>
-            <SkillsDiv>
-            <SkillsTitle><span className="skills-number">03.</span> Approach</SkillsTitle>
-            <p className="skills-text">When working on projects, I like to take a user-first approcah, ensuring that the end user will have a smooth and enjoyable time utilizing the website/app.</p>
-            </SkillsDiv>
-        </SkillsSection>
-        </HeadShake>
+        <SkillsWarapper>
+            <SkillsHeader>Languages</SkillsHeader>
+            <SkillsSection>
+                {icons.map((icon,index) => {
+                    return (
+                        <SkillsDiv className={index < 3 ? 'border-right ' : index < 4 ? 'skills-bottom border-right' : 'skills-bottom'} key={index}>
+                            <FontAwesomeIcon className='skills-icons' icon={['fab', icon.name]}/>
+                            <SkillsTitle>{icon.title}</SkillsTitle>
+                        </SkillsDiv>
+                    
+                )})}
+
+            </SkillsSection>
+        </SkillsWarapper>
     )
 }
 
