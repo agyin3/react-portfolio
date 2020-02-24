@@ -9,7 +9,7 @@ const ProjectCard = ({img, title, languages, description, url, github}) => {
     return(
         <ProjectContainer 
         src={img}
-        onClick={() => hover(true)}
+        onMouseEnter={() => hover(true)}
         >
             <CardContainer 
             className={`project-card ${animate ? 'slide-in' : animate === '' ? '' : 'slide-out'}`}
