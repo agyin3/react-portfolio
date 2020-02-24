@@ -90,7 +90,7 @@ export const Copyright = styled.p`
 `
 
 export const HomepageContainer = styled.div`
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5.5rem));
 `
@@ -301,7 +301,6 @@ export const ProjectContainer = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    cursor: pointer;
 
     @media (max-width: 800px) {
         width: 80%;
@@ -321,7 +320,6 @@ export const CardContainer = styled.div`
     width: 100%;
     background: rgba(247,172,207,0.9);
     overflow: hidden:
-    cursor: pointer;
 `
 
 export const CardLink = styled.a`
