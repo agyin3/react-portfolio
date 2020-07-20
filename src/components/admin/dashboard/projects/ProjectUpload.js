@@ -16,14 +16,20 @@ const ProjectUpload = () => {
         formData.append('image-raw', image)
 
         try {
+
             const res = await API.post('/projects', data)
             const proj_image = await API.post(`/projects/${res.data.project.id}/images`, formData, {headers: {"Content-Type": "multipart/form-data"}})
+
+        }catch(err) {
+
+            console.log(err.data)
+
+        }finally {
 
             setPreview('')
             setImage()
             reset()
-        }catch(err) {
-            console.log(err.data)
+            
         }
     }
 
