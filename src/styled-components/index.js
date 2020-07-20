@@ -365,3 +365,11 @@ export const CardText = styled.p`
         font-size: 1.4rem;
     }
 `
+
+export const Button = styled.button`
+    font-size: ${props => props.fontSize ? props.fontSize : '14px'};
+    color: ${props => props.color ? props.color : '#000'};
+    border-radius: 1rem;
+    text-align: center;
+    padding: ${props => props.padding ? props.padding : '0.5em 1.5em'}
+`
