@@ -1,16 +1,22 @@
 import React from 'react'
 import Header from './Header'
-import { HomepageContainer, HomepageHeading, HomepageText, HomePageHeader } from '../styled-components'
+import Particles from './Particles.js'
+import Bounce from 'react-reveal/Bounce'
+import { HomepageContainer, HomepageText, HomePageHeader } from '../styled-components'
 
 const Homepage = () => {
     return(
-
-        <HomepageContainer>
+        <>
             <Header />
-            <HomePageHeader>
-                <HomepageText>Utah based <br/> front-end developer</HomepageText>
-            </HomePageHeader>
-        </HomepageContainer>
+            <HomepageContainer>
+                <Particles />
+                <HomePageHeader>
+                    <HomepageText><Bounce top cascade>- Buddy Agyin -</Bounce></HomepageText> 
+                    <HomepageText><Bounce top cascade>Software and Web</Bounce></HomepageText>
+                    <HomepageText><Bounce top cascade>Developer</Bounce></HomepageText>
+                </HomePageHeader>
+            </HomepageContainer>
+        </>
     )
 }
 

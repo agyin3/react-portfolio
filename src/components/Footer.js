@@ -7,20 +7,20 @@ const Footer = () => {
         <FooterContainer>
             <Copyright>&copy; 2019 Buddy Agyin</Copyright>
             <Navigation>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'github']} size='s'/>
+                <NavLinks href='http://github.com/agyin3' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'github']} size='sm'/>
                 </NavLinks>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='s'/>
+                <NavLinks href='https://dev.to/developer_buddy' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'dev']} size='sm'/>
                 </NavLinks>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'twitter']} size='s'/>
+                <NavLinks href='https://linkedin.com/in/buddy-agyin' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'linkedin-in']} size='sm'/>
                 </NavLinks>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'instagram']} size='s'/>
+                <NavLinks href='https://twitter.com/developer_buddy' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'twitter']} size='sm'/>
                 </NavLinks>
-                <NavLinks>
-                    <FontAwesomeIcon icon={['fab', 'codepen']} size='s'/>
+                <NavLinks href='https://instagram.com/justsomebuddy_' target='_blank'>
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size='sm'/>
                 </NavLinks>
             </Navigation>
         </FooterContainer>

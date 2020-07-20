@@ -1,12 +1,12 @@
 import React from 'react'
-import { CurrentHeader, CurrentSection } from '../styled-components'
+import {  CurrentSection } from '../styled-components'
 
 const Current = () => {
     return(
         <CurrentSection>
-            <CurrentHeader>
+            {/* <CurrentHeader>
                 10<sup>+</sup>
-            </CurrentHeader>
+            </CurrentHeader> */}
         </CurrentSection>
     )
 }
