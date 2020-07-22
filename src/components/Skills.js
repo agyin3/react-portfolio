@@ -18,7 +18,7 @@ const Skills = () => {
             <SkillsSection>
                 {icons.map((icon,index) => {
                     return (
-                        <SkillsDiv className={index < 3 ? 'border-right ' : index < 4 ? 'skills-bottom border-right' : 'skills-bottom'} key={index}>
+                        <SkillsDiv className={index < 2 ? 'border-right ' : 2 < index < 4 ? 'skills-bottom border-right' : 'skills-bottom'} key={index}>
                             <FontAwesomeIcon className='skills-icons' icon={['fab', icon.name]}/>
                             <SkillsTitle>{icon.title}</SkillsTitle>
                         </SkillsDiv>
