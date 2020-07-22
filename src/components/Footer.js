@@ -6,7 +6,7 @@ const Footer = () => {
     return(
         <FooterContainer>
             <Copyright>&copy; 2019 Buddy Agyin</Copyright>
-            <Navigation>
+            <Navigation margin='0 0'>
                 <NavLinks href='http://github.com/agyin3' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'github']} size='sm'/>
                 </NavLinks>

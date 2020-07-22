@@ -5,8 +5,8 @@ const Header = () => {
 
     return (
         <HeaderContainer>
-            <Heading><a href='#'>Buddy Agyin</a></Heading>
-            <Navigation>
+            <Heading>Buddy Agyin</Heading>
+            <Navigation margin='1.6rem 0'>
                 <NavLinks href='#projects'>Projects</NavLinks>
                 <NavLinks href='#about-me'>About</NavLinks>
                 <NavLinks href='https://buddyagyin.blog' target='_blank'>Blog</NavLinks>
