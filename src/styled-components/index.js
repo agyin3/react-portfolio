@@ -400,5 +400,7 @@ export const SimpleContainer = styled.div`
     flex-direction: ${props => props.direction ? props.direction : 'row'};
     justify-content: ${props => props.justify ? props.justify : 'center'};
     align-items: ${props => props.align ? props.align : 'center'};
-    overflow: ${props => props.overflow ? props.overflow : 'hidden'}
+    overflow: ${props => props.overflow ? props.overflow : 'hidden'};
+    margin: ${props => props?.margin || '0'};
+    padding: ${props => props?.padding || '0 0'}
 `
