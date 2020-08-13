@@ -404,3 +404,9 @@ export const SimpleContainer = styled.div`
     margin: ${props => props?.margin || '0'};
     padding: ${props => props?.padding || '0 0'}
 `
+
+export const SimpleInput = styled.input`
+    width: ${props => props.width ? props.width : '350px'};
+    height: ${props => props.height ? props.height : '25px'};
+    margin: ${props => props.margin ? props.margin : '2% 0 5%'};
+`
