@@ -28,6 +28,7 @@ const SideBar = () => {
                 <NavLinks
                 size='3.2rem'
                 hoverSize='3.64rem'
+                href='/admin/dash'
                 >
                     Projects
 
@@ -35,6 +36,7 @@ const SideBar = () => {
                 <NavLinks
                 size='3.2rem'
                 hoverSize='3.64rem'
+                href='/admin/add-project'
                 >
                     Add Project
 
