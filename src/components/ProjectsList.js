@@ -1,16 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Fade from 'react-reveal/Fade'
-import projects from '../projects'
-import { ProjectContainer, CardWrapper } from '../styled-components'
+import { CardWrapper } from '../styled-components'
+
 import ProjectCard from './ProjectCard'
+import axios from 'axios'
 
 const ProjectsList = () => {
+    const [projects, setProjects] = useState([])
+
+    const fetchProjects = async () => {
+        try {
+            const projectList = await axios.get(`${process.env.REACT_APP_BASE_DB_URL}/projects`)
+
+            // Only need to set favorite projects to state here
+            const favorites = await projectList.data.projects
+                                .filter(proj => proj.favorite)
+                                // Need to split up string into an array 
+                                // In order to map over them in ProjectCard component
+                                .map(proj => {
+                                    return {...proj, languages: proj.languages.split(',')}
+                                })
+            setProjects(favorites)
+        }catch(err){
+            console.log('You fucked up!!', err.message)
+        }
+    }
+
+    useEffect(() => {
+        fetchProjects()
+        
+    }, [])
+    
     return(
         <>
         <Fade bottom cascade>
         <CardWrapper>
-                {projects.map(project => {
-                return <ProjectCard img={project.img} {...project} />
+                {projects?.map(project => {
+                return <ProjectCard image={project.image} {...project} />
                 })}
         </CardWrapper>
         </Fade>

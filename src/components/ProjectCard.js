@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { ProjectContainer, CardContainer, CardLink, CardHeader, CardSubHeader, CardText } from '../styled-components'
 
-const ProjectCard = ({img, title, languages, description, url, github}) => {
+const ProjectCard = ({image, name, languages, description, url, github}) => {
     const [animate, setAnimate] = useState('')
     const hover = visible => {
         setAnimate(visible)
     }
     return(
         <ProjectContainer 
-        src={img}
+        src={image}
         onMouseEnter={() => hover(true)}
         onMouseLeave={() => hover(false)}
         >
@@ -16,7 +16,7 @@ const ProjectCard = ({img, title, languages, description, url, github}) => {
             className={`project-card ${animate ? 'slide-in' : animate === '' ? '' : 'slide-out'}`}
             >
                 <div>
-                    <CardHeader>{title}</CardHeader>
+                    <CardHeader>{name}</CardHeader>
                     <CardSubHeader>{languages.map(lang => `${lang} `)}</CardSubHeader>
                 </div>
                 <CardText>{description}</CardText>

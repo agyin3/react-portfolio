@@ -1,20 +1,22 @@
 import React from 'react';
-import Homepage from './components/Homepage'
-import Projects from './components/Projects'
-import AboutMe from './components/AboutMe'
-import Footer from './components/Footer'
 import './App.css';
-import Skills from './components/Skills';
+import { Switch, Route } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import Admin from './components/admin/AdminController';
 
 function App() {
   return (
-    <>
-      <Homepage />
-      <AboutMe />
-      <Projects />
-      <Skills />
-      <Footer />
-    </>
+    <Switch>
+      <Route exact path='/'>
+        <MainPage />
+      </Route>
+      <Route path='/home'>
+        <MainPage />
+      </Route>
+      <Route path='/admin'>
+        <Admin />
+      </Route>
+    </Switch>
   );
 }
 
