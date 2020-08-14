@@ -10,7 +10,7 @@ const ProjectsList = () => {
 
     const fetchProjects = async () => {
         try {
-            const projectList = await axios.get('/projects')
+            const projectList = await axios.get(`${process.env.REACT_APP_BASE_URL}/projects`)
 
             // Only need to set favorite projects to state here
             const favorites = await projectList.data.projects
