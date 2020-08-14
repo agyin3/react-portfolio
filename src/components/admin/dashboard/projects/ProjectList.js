@@ -10,14 +10,9 @@ const ProjectList = () => {
 
     const fetchProjects = async () => {
         try {
-            // UNCOMMENT WHEN LIVE
             
-            // const res = await API.get('/projects')
-            // console.log(res)
-            // setProjects(res.data.projects)
-
-            // DELETE WHEN LIVE
-            await setProjects(projectsData)
+            const res = await API.get('/projects')
+            setProjects(res.data.projects.sort((a, b) => a.id - b.id))
 
         }catch(err){
             console.log('There was an error', err.response)
