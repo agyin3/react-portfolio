@@ -32,7 +32,7 @@ export const HeaderContainer = styled.div`
     }
 `
 
-export const Navigation = styled.ul`
+export const Navigation = styled.nav`
     display: flex;
     width: 40%;
     justify-content: space-around;
