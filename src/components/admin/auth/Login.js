@@ -46,6 +46,8 @@ const Login = () => {
         <SimpleContainer
         color='#000'
         direction='column'
+        justify='flex-start'
+        padding='7.5% 0'
         >
         <h1>Welcome Back, CodingGod!</h1>
         <p style={{
