@@ -2,15 +2,18 @@ import React from 'react'
 import { Button } from '../../../styled-components'
 import API from '../../../utils/API'
 import { useForm } from 'react-hook-form'
+import { useHistory } from 'react-router-dom'
 
 const Login = () => {
+    const history = useHistory()
     const { register, handleSubmit, reset, errors } = useForm()
+
 
     const onSubmit = async (data) => {
         try {
-
             const res = await API.post('/login', data)
             localStorage.setItem('token', res.data.token)
+            history.push('/admin/dash')
             
         }catch(err) {
 
