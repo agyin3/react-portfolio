@@ -16,11 +16,11 @@ const AboutMe = () => {
                 className='about-me-text'
                 text={[
                     "My name is Buddy Agyin. I am a Full Stack Developer based in Salt Lake City.", 
-                    "I love working with Web technologies to build sites and apps.",
-                    "If you're looking for someone to help build your next great project, I'm your guy."
+                    "I have experience working on cross-functinoal teams, meeting deadlines, and utilizing agile development principles",
+                    "I'm currently looking for my next opportunity and would love to get in contact with you"
                 ]}
-                speed={125}
-                typingDelay={1500}
+                speed={85}
+                typingDelay={250}
             />
         </AboutMeContainer>
     )

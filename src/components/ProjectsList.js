@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Fade from 'react-reveal/Fade'
 import { CardWrapper } from '../styled-components'
 
 import ProjectCard from './ProjectCard'
@@ -33,15 +32,11 @@ const ProjectsList = ( {setIsLoading} ) => {
     }, [setIsLoading])
     
     return(
-        <>
-        <Fade bottom cascade>
         <CardWrapper>
                 {projects?.map(project => {
                 return <ProjectCard key={project.id} image={project.image} {...project} />
                 })}
         </CardWrapper>
-        </Fade>
-        </>
     )
 }
 
