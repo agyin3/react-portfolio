@@ -18,7 +18,7 @@ const Skills = () => {
                 {icons.map((icon,index) => {
                     return (
                         <SkillsDiv className={index < 2 ? 'border-right ' : 2 < index < 4 ? 'skills-bottom border-right' : 'skills-bottom'} key={index}>
-                            <FontAwesomeIcon aria-label={`${title} icon`} className='skills-icons' icon={['fab', icon.name]}/>
+                            <FontAwesomeIcon aria-label={`${icon.title} icon`} className='skills-icons' icon={['fab', icon.name]}/>
                             <SkillsTitle>{icon.title}</SkillsTitle>
                         </SkillsDiv>
                     
