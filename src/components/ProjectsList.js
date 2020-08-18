@@ -33,15 +33,11 @@ const ProjectsList = ( {setIsLoading} ) => {
     }, [setIsLoading])
     
     return(
-        <>
-        <Fade bottom cascade>
         <CardWrapper>
                 {projects?.map(project => {
                 return <ProjectCard key={project.id} image={project.image} {...project} />
                 })}
         </CardWrapper>
-        </Fade>
-        </>
     )
 }
 
