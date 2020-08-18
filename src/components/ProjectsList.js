@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Fade from 'react-reveal/Fade'
 import { CardWrapper } from '../styled-components'
 
 import ProjectCard from './ProjectCard'

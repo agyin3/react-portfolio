@@ -1,5 +1,4 @@
 import React from 'react'
-import Flip from 'react-reveal/Flip'
 import ProjectsList from './ProjectsList'
 import { ProjectsContainer, ProjectsHeader, NavLinks } from '../styled-components'
 
