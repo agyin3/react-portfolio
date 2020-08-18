@@ -23,8 +23,8 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
                     <CardSubHeader>{languages.map(lang => `${lang} `)}</CardSubHeader>
                 </div>
                 <CardText>{description}</CardText>
-                <CardLink href={url} target='_blank' aria-label={`${name}`}>View Project</CardLink>
-                <CardLink href={github} target='_blank' aria-label={`${name} Github`}>Github</CardLink>
+                <CardLink href={url} target='_blank' rel='noreferrer noopener' aria-label={`${name}`}>View Project</CardLink>
+                <CardLink href={github} target='_blank' rel='noreferrer noopener' aria-label={`${name} Github`}>Github</CardLink>
             </CardContainer>
             </ProjectImage>
         </ProjectContainer>
