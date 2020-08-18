@@ -10,7 +10,7 @@ import TypingEffect from 'react-typing-effect'
 const AboutMe = () => {
     return(
         <AboutMeContainer id='about-me'>
-            <AvatarImage src={avatar} />
+            <AvatarImage src={avatar} alt='Fun Cartoon Avatar representation of Buddy Agyin'/>
             <AboutMeText>Hi There!</AboutMeText>
             <TypingEffect 
                 className='about-me-text'

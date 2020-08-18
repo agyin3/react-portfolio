@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ProjectContainer, CardContainer, CardLink, CardHeader, CardSubHeader, CardText } from '../styled-components'
+import { ProjectContainer, ProjectImage, CardContainer, CardLink, CardHeader, CardSubHeader, CardText } from '../styled-components'
 
 const ProjectCard = ({image, name, languages, description, url, github}) => {
     const [animate, setAnimate] = useState('')
@@ -7,11 +7,14 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
         setAnimate(visible)
     }
     return(
-        <ProjectContainer 
-        src={image}
-        onMouseEnter={() => hover(true)}
-        onMouseLeave={() => hover(false)}
-        >
+        <ProjectContainer>
+            <ProjectImage 
+            role='image'
+            aria-label={`Screenshot of ${name} homepage`} 
+            src={image}
+            onMouseEnter={() => hover(true)}
+            onMouseLeave={() => hover(false)}
+             >
             <CardContainer 
             className={`project-card ${animate ? 'slide-in' : animate === '' ? '' : 'slide-out'}`}
             >
@@ -23,6 +26,7 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
                 <CardLink href={url} target='_blank'>View Project</CardLink>
                 <CardLink href={github} target='_blank'>Github</CardLink>
             </CardContainer>
+            </ProjectImage>
         </ProjectContainer>
     )
 }

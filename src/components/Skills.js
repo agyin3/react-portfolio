@@ -1,5 +1,4 @@
 import React from 'react'
-import HeadShake from 'react-reveal/HeadShake'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SkillsSection, SkillsDiv, SkillsTitle, SkillsHeader, SkillsWarapper } from '../styled-components'
 
@@ -19,7 +18,7 @@ const Skills = () => {
                 {icons.map((icon,index) => {
                     return (
                         <SkillsDiv className={index < 2 ? 'border-right ' : 2 < index < 4 ? 'skills-bottom border-right' : 'skills-bottom'} key={index}>
-                            <FontAwesomeIcon className='skills-icons' icon={['fab', icon.name]}/>
+                            <FontAwesomeIcon aria-label={`${title} icon`} className='skills-icons' icon={['fab', icon.name]}/>
                             <SkillsTitle>{icon.title}</SkillsTitle>
                         </SkillsDiv>
                     
