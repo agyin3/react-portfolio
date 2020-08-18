@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  SimpleContainer,
-  ProjectContainer,
-} from "../../../../styled-components";
+import { SimpleContainer } from "../../../../styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import API from "../../../../utils/API";
 
 const ProjectCard = ({ project, fetchProjects }) => {
   const updateFav = async (e, id) => {
     e.preventDefault();
-
 
     try {
       await API.put(`/projects/${id}`, { favorite: !project.favorite });
@@ -28,7 +24,7 @@ const ProjectCard = ({ project, fetchProjects }) => {
     } catch (err) {
       console.log("There was an error", err.response);
     }
-  }
+  };
 
   return (
     <SimpleContainer

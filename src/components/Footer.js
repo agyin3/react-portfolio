@@ -5,7 +5,7 @@ import { Navigation, NavLinks, FooterContainer, Copyright } from '../styled-comp
 const Footer = () => {
     return(
         <FooterContainer>
-            <Copyright>&copy; 2019 Buddy Agyin</Copyright>
+            <Copyright>&copy; 2020 Buddy Agyin</Copyright>
             <Navigation margin='0 0'>
                 <NavLinks href='http://github.com/agyin3' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'github']} size='sm'/>

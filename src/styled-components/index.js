@@ -315,12 +315,7 @@ export const CardWrapper = styled.div`
 export const ProjectContainer = styled.div`
     width: 30%;
     height:25rem;
-    background: url(${props => props.src || ''});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     overflow: hidden;
-
     &:hover {
         cursor: pointer;
     }
@@ -331,9 +326,20 @@ export const ProjectContainer = styled.div`
     }
 `
 
+export const ProjectImage = styled.span`
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url(${props => props.src || ''});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+`
+
 export const CardContainer = styled.div`
     box-sizing: border-box;
     display: flex;
+    z-index: 999;
     flex-direction: column;
     padding: 1.5rem 1rem;
     justify-content: space-around;

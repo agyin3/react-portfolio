@@ -19,7 +19,7 @@ const DropzoneComp = ({ setImage, setPreview, preview }) => {
       reader.readAsDataURL(file);
       return file;
     });
-  }, []);
+  }, [setImage, setPreview]);
 
   return (
     <ReactDropZone onDrop={onDrop} accept={"image/*"}>
