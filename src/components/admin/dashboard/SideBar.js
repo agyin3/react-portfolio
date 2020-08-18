@@ -44,6 +44,8 @@ const SideBar = () => {
                 <NavLinks
                 size='3.2rem'
                 hoverSize='3.64rem'
+                onClick={() => localStorage.clear()}
+                href='/admin'
                 >
                     Sign Out
 
