@@ -10,7 +10,6 @@ const Projects = ({setIsLoading}) => {
                     Check Out Some Of <wbr/> My Recent Work
                 </ProjectsHeader>
                 <ProjectsList setIsLoading={setIsLoading} />
-                <NavLinks>View More Projects</NavLinks>
             </ProjectsContainer>
     )
 }
