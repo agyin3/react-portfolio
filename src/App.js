@@ -4,24 +4,22 @@ import { Switch, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import Admin from './components/admin/AdminController';
 
-export const APIContext = createContext()
+
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false)
+
   return (
-    <APIContext.Provider value={isLoading, setIsLoading}>
       <Switch>
         <Route exact path='/'>
-          <MainPage isLoading={isLoading} setIsLoading={setIsLoading} />
+          <MainPage />
         </Route>
         <Route path='/home'>
-          <MainPage isLoading={isLoading} />
+          <MainPage />
         </Route>
         <Route path='/admin'>
           <Admin />
         </Route>
       </Switch>
-    </APIContext.Provider>
   );
 }
 
