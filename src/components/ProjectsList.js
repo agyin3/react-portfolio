@@ -5,7 +5,7 @@ import { CardWrapper } from '../styled-components'
 import ProjectCard from './ProjectCard'
 import axios from 'axios'
 
-const ProjectsList = () => {
+const ProjectsList = ( {setIsLoading} ) => {
     const [projects, setProjects] = useState([])
 
     const fetchProjects = async () => {
@@ -27,8 +27,9 @@ const ProjectsList = () => {
     }
 
     useEffect(() => {
+        setIsLoading(true)
         fetchProjects()
-        
+        setIsLoading(false)
     }, [])
     
     return(
@@ -36,7 +37,7 @@ const ProjectsList = () => {
         <Fade bottom cascade>
         <CardWrapper>
                 {projects?.map(project => {
-                return <ProjectCard image={project.image} {...project} />
+                return <ProjectCard key={project.id} image={project.image} {...project} />
                 })}
         </CardWrapper>
         </Fade>
