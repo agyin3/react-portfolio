@@ -9,7 +9,7 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
     return(
         <ProjectContainer>
             <ProjectImage 
-            role='image'
+            role='img'
             aria-label={`Screenshot of ${name} homepage`} 
             src={image}
             onMouseEnter={() => hover(true)}

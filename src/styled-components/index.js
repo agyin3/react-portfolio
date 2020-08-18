@@ -149,7 +149,7 @@ export const ProjectsContainer = styled.div`
     }
 `
 
-export const ProjectsHeader = styled.h1`
+export const ProjectsHeader = styled.h2`
     font-family: 'Raleway', sans-serif;
     line-height: 0.8;
     font-size: 3.6rem;
