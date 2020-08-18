@@ -30,7 +30,7 @@ const ProjectsList = ( {setIsLoading} ) => {
         setIsLoading(true)
         fetchProjects()
         setIsLoading(false)
-    }, [])
+    }, [setIsLoading])
     
     return(
         <>

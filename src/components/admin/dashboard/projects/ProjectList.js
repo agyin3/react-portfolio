@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { SimpleContainer, Heading } from '../../../../styled-components'
-import projectsData from '../../../../projects'
 import ProjectCard from './ProjectCard'
 import API from '../../../../utils/API'
 
