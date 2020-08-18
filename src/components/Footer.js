@@ -19,9 +19,6 @@ const Footer = () => {
                 <NavLinks href='https://twitter.com/developer_buddy' target='_blank'>
                     <FontAwesomeIcon icon={['fab', 'twitter']} size='sm'/>
                 </NavLinks>
-                <NavLinks href='https://instagram.com/justsomebuddy_' target='_blank'>
-                    <FontAwesomeIcon icon={['fab', 'instagram']} size='sm'/>
-                </NavLinks>
             </Navigation>
         </FooterContainer>
     )
