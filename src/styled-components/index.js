@@ -111,6 +111,16 @@ export const HomepageContainer = styled.div`
     }
 `
 
+export const HomepagePhoto = styled.span`
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: ${props => props.image ? `url('${props.image}')` : '#000'};
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+`
+
 export const HomePageHeader = styled.div`
     display: flex;
     flex-direction: column;
@@ -123,7 +133,7 @@ export const HomepageText = styled.h1`
     color: ${white};
     font-family: 'Raleway', sans-serif;
     font-size: 4.4rem;
-    text-shadow: 0 0 40px ${black};
+    text-shadow: 0 0 10px ${black};
     text-align: center;
     align-self: center;
     margin: 0;
