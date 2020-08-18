@@ -4,7 +4,7 @@ import { CardWrapper } from '../styled-components'
 import ProjectCard from './ProjectCard'
 import axios from 'axios'
 
-const ProjectsList = ( {setIsLoading} ) => {
+const ProjectsList = () => {
     const [projects, setProjects] = useState([])
 
     const fetchProjects = async () => {
@@ -26,10 +26,8 @@ const ProjectsList = ( {setIsLoading} ) => {
     }
 
     useEffect(() => {
-        setIsLoading(true)
         fetchProjects()
-        setIsLoading(false)
-    }, [setIsLoading])
+    }, [])
     
     return(
         <CardWrapper>
