@@ -32,7 +32,7 @@ export const HeaderContainer = styled.div`
     }
 `
 
-export const Navigation = styled.ul`
+export const Navigation = styled.nav`
     display: flex;
     width: 40%;
     justify-content: space-around;
@@ -149,7 +149,7 @@ export const ProjectsContainer = styled.div`
     }
 `
 
-export const ProjectsHeader = styled.h1`
+export const ProjectsHeader = styled.h2`
     font-family: 'Raleway', sans-serif;
     line-height: 0.8;
     font-size: 3.6rem;

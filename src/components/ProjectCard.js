@@ -9,7 +9,7 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
     return(
         <ProjectContainer>
             <ProjectImage 
-            role='image'
+            role='img'
             aria-label={`Screenshot of ${name} homepage`} 
             src={image}
             onMouseEnter={() => hover(true)}
@@ -23,8 +23,8 @@ const ProjectCard = ({image, name, languages, description, url, github}) => {
                     <CardSubHeader>{languages.map(lang => `${lang} `)}</CardSubHeader>
                 </div>
                 <CardText>{description}</CardText>
-                <CardLink href={url} target='_blank'>View Project</CardLink>
-                <CardLink href={github} target='_blank'>Github</CardLink>
+                <CardLink href={url} target='_blank' rel='noreferrer noopener' aria-label={`${name}`}>View Project</CardLink>
+                <CardLink href={github} target='_blank' rel='noreferrer noopener' aria-label={`${name} Github`}>Github</CardLink>
             </CardContainer>
             </ProjectImage>
         </ProjectContainer>

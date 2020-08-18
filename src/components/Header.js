@@ -7,9 +7,9 @@ const Header = () => {
         <HeaderContainer>
             <Heading>Buddy Agyin</Heading>
             <Navigation margin='1.6rem 0'>
-                <NavLinks href='#projects'>Projects</NavLinks>
-                <NavLinks href='#about-me'>About</NavLinks>
-                <NavLinks href='https://buddyagyin.blog' target='_blank'>Blog</NavLinks>
+                <NavLinks href='#projects' rel='noreferrer' aria-label='Projects'>Projects</NavLinks>
+                <NavLinks href='#about-me' rel='noreferrer' aria-label='About'>About</NavLinks>
+                <NavLinks href='https://buddyagyin.blog' rel='noreferrer' target='_blank' aria-label='Blog'>Blog</NavLinks>
             </Navigation>
         </HeaderContainer>
     )
