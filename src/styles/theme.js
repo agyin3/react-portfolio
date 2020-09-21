@@ -40,17 +40,16 @@ theme.typography.h1 = {
 
 theme.typography.h2 = {
     fontFamily: "Bebas Neue, cursive",
-    fontSize: "7.2rem"
+    fontSize: "6.4rem",
+    color: theme.palette.secondary.dark
 }
 
 theme.typography.h3 = {
     fontFamily: "Montserrat, cursive",
     fontSize: "2.4rem",
-    fontWeight: 700
-}
-
-theme.typography.p = {
-    fontFamily: "Montserrat, sans-serif"
+    fontWeight: 700,
+    color: theme.palette.secondary.dark,
+    display: 'inline'
 }
 
 export default theme
