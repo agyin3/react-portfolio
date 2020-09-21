@@ -1,12 +1,12 @@
 import React from "react";
 import Lottie from "react-lottie";
-import loader from "../../utils/loader.json"
 
-const LottieLoader = () => {
+
+const LottieLoader = ({ lottie }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: loader,
+    animationData: lottie,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
