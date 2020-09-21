@@ -32,7 +32,10 @@ const theme = createMuiTheme({
 
 theme.typography.h1 = {
     fontFamily: "Bebas Neue, cursive",
-    fontSize: "20rem"
+    fontSize: "15rem",
+    "@media (min-width: 800px)": {
+        fontSize: '20rem'
+    }
 }
 
 theme.typography.h2 = {
