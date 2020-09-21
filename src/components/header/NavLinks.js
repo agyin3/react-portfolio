@@ -1,8 +1,4 @@
-import {
-  Box,
-  Hidden,
-  Link,
-} from "@material-ui/core";
+import { Box, Hidden, Link } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import theme from "../../styles/theme";
 import React from "react";
@@ -34,11 +30,11 @@ const NavLinks = React.memo(() => (
   <Hidden smDown>
     <LinkWrapper>
       <MenuLink href="#home">Home</MenuLink>
-      <MenuLink href='#projects'>Projects</MenuLink>
-      <MenuLink href='#about'>About</MenuLink>
-      <MenuLink href='#contact'>Contact</MenuLink>
+      <MenuLink href="#projects">Projects</MenuLink>
+      <MenuLink href="#about">About</MenuLink>
+      <MenuLink href="#contact">Contact</MenuLink>
     </LinkWrapper>
   </Hidden>
 ));
 
-export default NavLinks
+export default NavLinks;
