@@ -1,6 +1,12 @@
 import { Box } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+  memo,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import PortfolioContext from "../../context/PortfolioContext";
 import theme from "../../styles/theme";
 import API from "../../utils/API";
@@ -17,15 +23,14 @@ const ProjectsWrapper = withStyles({
   },
 })(Box);
 
-const Projects = () => {
+const Projects = memo(() => {
   const { setLoading } = useContext(PortfolioContext);
   const [projects, setProjects] = useState([]);
 
-  const fetchProjects = async () => {
+  const fetchProjects = useCallback(async () => {
     setLoading(true);
     try {
       const res = await API.get("/projects");
-      console.log(res);
 
       // Only need to set favorite projects to state here
       const favorites = await res.data.projects
@@ -42,11 +47,11 @@ const Projects = () => {
     } finally {
       setLoading(true);
     }
-  };
+  }, [setLoading]);
 
   useEffect(() => {
     fetchProjects();
-  }, []);
+  }, [fetchProjects]);
 
   return (
     <ProjectsWrapper id="projects">
@@ -55,6 +60,6 @@ const Projects = () => {
       ))}
     </ProjectsWrapper>
   );
-};
+});
 
 export default Projects;
