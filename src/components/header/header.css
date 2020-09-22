@@ -1,0 +1,6 @@
+/* React Scroll Active Class Styling */
+
+.active {
+  text-decoration: underline !important;
+  font-weight: 700;
+}
