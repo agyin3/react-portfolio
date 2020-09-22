@@ -1,102 +1,32 @@
 import React from "react";
-import { SimpleContainer } from "../../../../styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import API from "../../../../utils/API";
+import { withStyles } from "@material-ui/styles";
+import { Paper } from "@material-ui/core";
+import theme from "../../../../styles/theme";
+import ProjectText from "./ProjectText";
+
+const ProjectPaper = withStyles({
+  root: {
+    width: "85%",
+    minHeight: "30rem",
+    padding: "3rem 0",
+    margin: "2.5rem 0",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    background: theme.palette.primary.dark,
+  },
+})(Paper);
 
 const ProjectCard = ({ project, fetchProjects }) => {
-  const updateFav = async (e, id) => {
-    e.preventDefault();
-
-    try {
-      await API.put(`/projects/${id}`, { favorite: !project.favorite });
-      fetchProjects();
-    } catch (err) {
-      console.log("There was an error", err.response);
-    }
-  };
-
-  const deleteProj = async (e, id) => {
-    e.preventDefault();
-
-    try {
-      await API.delete(`/projects/${id}`);
-      fetchProjects();
-    } catch (err) {
-      console.log("There was an error", err.response);
-    }
-  };
-
   return (
-    <SimpleContainer
-      width="85%"
-      height="100%"
-      padding="1% 0"
-      margin="25px 0"
-      justify="space-around"
-      background="#30323d"
-      overflow="initial"
-    >
-      <img src={project.image} style={{ height: "200px", width: "25%" }} />
-      {/* Possibly move these into their own component */}
-      <SimpleContainer
-        width="55%"
-        height="300px"
-        background="#30323d"
-        direction="column"
-        padding="10px 0"
-        justify="space-between"
-      >
-        <SimpleContainer
-          width="100%"
-          height="100px"
-          background="#30323d"
-          align="baseline"
-        >
-          <h1
-            style={{
-              textAlign: "center",
-              textDecoration: "underline",
-              margin: "0.67em",
-              fontSize: "2.8rem",
-            }}
-          >
-            {project.name}
-          </h1>
-
-          {project?.favorite ? (
-            <FontAwesomeIcon
-              className="admin_svg"
-              icon={["fas", "heart"]}
-              onClick={(e) => updateFav(e, project.id)}
-            />
-          ) : (
-            <FontAwesomeIcon
-              className="admin_svg"
-              icon={["far", "heart"]}
-              onClick={(e) => updateFav(e, project.id)}
-            />
-          )}
-
-          <FontAwesomeIcon
-            className="admin_svg"
-            icon={"trash"}
-            onClick={(e) => deleteProj(e, project.id)}
-          />
-        </SimpleContainer>
-        <p>{project.description}</p>
-        {/* Possibly move these into their own component */}
-        <SimpleContainer
-          width="100%"
-          height="75px"
-          background="#30323d"
-          justify="space-around"
-        >
-          <a href={project.github}>Github Repo</a>
-          <a href={project.url}>Deployed Site</a>
-          {/* Need to add edit and delete buttons */}
-        </SimpleContainer>
-      </SimpleContainer>
-    </SimpleContainer>
+    <ProjectPaper>
+      <img
+        src={project.image}
+        style={{ width: "25%" }}
+        alt={`${project.name} Screenshot`}
+      />
+      <ProjectText fetchProjects={fetchProjects} project={project} />
+    </ProjectPaper>
   );
 };
 

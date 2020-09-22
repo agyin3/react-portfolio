@@ -1,28 +1,38 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import DropzoneComp from "./Dropzone";
-import AddProjectForm from "./AddProjectForm";
-import { SimpleContainer } from "../../../../styled-components";
+import ProjectForm from "./ProjectForm";
+import theme from "../../../../styles/theme";
+import { Box, Typography } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
 
-const AddProject = () => {
+const FormContainer = withStyles({
+  root: {
+    height: "100vh",
+    width: "75%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    background: theme.palette.background.default,
+  },
+})(Box);
+
+const AddProject = memo(() => {
   const [image, setImage] = useState();
   const [preview, setPreview] = useState();
   return (
-    <SimpleContainer
-      width='80%'
-      margin='0 auto'
-      direction='column'
-      justify='flex-start'
-      padding='2.5% 0'
-      color='#000'
-    >
+    <FormContainer>
+      <Typography variant="h2" component="p">
+        Add Project
+      </Typography>
       <DropzoneComp
         setImage={setImage}
         setPreview={setPreview}
         preview={preview}
       />
-      <AddProjectForm image={image} setPreview={setPreview}/>
-    </SimpleContainer>
+      <ProjectForm image={image} setPreview={setPreview} />
+    </FormContainer>
   );
-};
+});
 
 export default AddProject;
