@@ -17,7 +17,7 @@ const ProjectsWrapper = withStyles({
   },
 })(Box);
 
-const Projects = ({ scrollPos }) => {
+const Projects = () => {
   const { setLoading } = useContext(PortfolioContext);
   const [projects, setProjects] = useState([]);
 
@@ -51,12 +51,7 @@ const Projects = ({ scrollPos }) => {
   return (
     <ProjectsWrapper id="projects">
       {projects.map((proj, idx) => (
-        <Project
-          key={proj.id}
-          proj={proj}
-          idx={idx % 2}
-          scrollPos={scrollPos}
-        />
+        <Project key={proj.id} proj={proj} idx={idx % 2} />
       ))}
     </ProjectsWrapper>
   );
