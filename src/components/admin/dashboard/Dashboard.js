@@ -1,19 +1,22 @@
-import React from 'react'
-import { SimpleContainer } from '../../../styled-components'
-import SideBar from './SideBar'
-import ProjectList from './projects/ProjectList'
+import React, { memo } from "react";
+import SideBar from "./SideBar";
+import { withStyles } from "@material-ui/styles";
+import { Box } from "@material-ui/core";
+import ProjectPage from "./projects/ProjectPage";
 
-const Dashboard = () => {
+const DashboardContainer = withStyles({
+  root: {
+    display: "flex",
+  },
+})(Box);
 
-    return(
-        <SimpleContainer
-        height='100%'
-        overflow='hidden'
-        >
-            <SideBar />
-            <ProjectList />
-        </SimpleContainer>
-    )
-}
+const Dashboard = memo(() => {
+  return (
+    <DashboardContainer>
+      <SideBar />
+      <ProjectPage />
+    </DashboardContainer>
+  );
+});
 
-export default Dashboard
+export default Dashboard;

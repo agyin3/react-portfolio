@@ -1,58 +1,29 @@
-import React from 'react'
-import { SimpleContainer, Heading, NavLinks } from '../../../styled-components'
+import { Box, Typography } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+import React, { memo } from "react";
+import theme from "../../../styles/theme";
+import AdminLinks from "./AdminLinks";
 
-const SideBar = () => {
-    return (
-        <SimpleContainer
-        background='#30323d'
-        width='25%'
-        direction='column'
-        justify='flex-start'
-        margin='0'
-        >
-            <Heading
-            size='4.8rem'
-            align='center'
-            hoverSize='5.44rem'
-            margin='3rem 0 4rem'
-            >
-                Buddy's <br /> Dashboard
-            </Heading>
-            <SimpleContainer
-            background='none'
-            direction='column'
-            height='16rem'
-            justify='space-between'
-            margin='0'
-            >
-                <NavLinks
-                size='3.2rem'
-                hoverSize='3.64rem'
-                href='/admin/dash'
-                >
-                    Projects
+const SideBarContainer = withStyles({
+  root: {
+    width: "25%",
+    background: theme.palette.primary.light,
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    textAlign: "center",
+    paddingTop: "2.5rem",
+    height: "100vh",
+  },
+})(Box);
 
-                </NavLinks>
-                <NavLinks
-                size='3.2rem'
-                hoverSize='3.64rem'
-                href='/admin/add-project'
-                >
-                    Add Project
+const SideBar = memo(() => (
+  <SideBarContainer>
+    <Typography variant="h2" component="p">
+      Buddy's <br /> Dashboard
+    </Typography>
+    <AdminLinks />
+  </SideBarContainer>
+));
 
-                </NavLinks>
-                <NavLinks
-                size='3.2rem'
-                hoverSize='3.64rem'
-                onClick={() => localStorage.clear()}
-                href='/admin'
-                >
-                    Sign Out
-
-                </NavLinks>
-            </SimpleContainer>
-        </SimpleContainer>
-    )
-}
-
-export default SideBar
+export default SideBar;

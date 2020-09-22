@@ -1,24 +1,22 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Login from './auth/Login'
-import Dashboard from './dashboard/Dashboard'
-import AddProjectPage from './dashboard/projects/AddProjectPage'
-import PrivateRoute from '../../utils/PrivateRoute'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Dashboard from "./dashboard/Dashboard";
+import AddProjectPage from "./dashboard/projects/AddProjectPage";
+import PrivateRoute from "../../utils/PrivateRoute";
+import LoginPage from "./auth/LoginPage";
 
 const Admin = () => (
-    <Switch>
-        <Route exact path='/admin'>
-            <Login />
-        </Route>
+  <Switch>
+    <PrivateRoute path="/admin/dash" component={Dashboard} />
 
-        <Route exact path='/admin/login'>
-            <Login />
-        </Route>
-        
-        <PrivateRoute path='/admin/dash' component={Dashboard} />
+    <PrivateRoute path="/admin/add-project" component={AddProjectPage} />
+    <Route path="/admin/login">
+      <LoginPage />
+    </Route>
+    <Route path="/admin">
+      <LoginPage />
+    </Route>
+  </Switch>
+);
 
-        <PrivateRoute path='/admin/add-project' component={AddProjectPage} />
-    </Switch>
-)
-
-export default Admin
+export default Admin;
