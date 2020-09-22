@@ -1,54 +1,49 @@
-import React, { useState, useEffect } from 'react'
-import { SimpleContainer, Heading } from '../../../../styled-components'
-import ProjectCard from './ProjectCard'
-import API from '../../../../utils/API'
+import React, { useState, useEffect, useCallback, memo } from "react";
+import ProjectCard from "./ProjectCard";
+import API from "../../../../utils/API";
+import { Box } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
 
+const ProjectWrapper = withStyles({
+  root: {
+    height: "200vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    overflow: "scroll",
+  },
+})(Box);
 
-const ProjectList = () => {
-    const [projects, setProjects] = useState()
+const ProjectList = memo(() => {
+  const [projects, setProjects] = useState([]);
 
-    const fetchProjects = async () => {
-        try {
-            
-            const res = await API.get('/projects')
-            setProjects(res.data.projects.sort((a, b) => a.id - b.id))
-
-        }catch(err){
-            console.log('There was an error', err.response)
-        }
+  const fetchProjects = useCallback(async () => {
+    try {
+      // GET request to retrieve projects
+      const res = await API.get("/projects");
+      setProjects(res.data.projects.sort((a, b) => a.id - b.id));
+    } catch (err) {
+      // NEED TO ADD PROPER ERROR HANDLING
+      console.log("There was an error fetching: ", err.response);
     }
+  }, [setProjects]);
 
-    useEffect(() => {
-        fetchProjects()
-    }, [])
+  useEffect(() => {
+    fetchProjects();
+  }, [fetchProjects]);
 
-    return (
-        <SimpleContainer
-        width='80%'
-        height='100vh'
-        direction='column'
-        justify='space-between'
-        overflow='hidden'
-        >
-            <Heading
-            size='6.4rem'
-            color='#000'
-            hoverSize='6.4rem'
-            >
-                Project List
-            </Heading>
-            <SimpleContainer 
-            justify='flex-start' 
-            direction='column' 
-            overflow='scroll' 
-            height='200vh'
-            >
-            {projects?.map(project => (
-                <ProjectCard project={project} fetchProjects={fetchProjects} />
-            ))}
-            </SimpleContainer>
-        </SimpleContainer>
-    )
-}
+  return (
+    <ProjectWrapper>
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          fetchProjects={fetchProjects}
+        />
+      ))}
+    </ProjectWrapper>
+  );
+});
 
-export default ProjectList
+export default ProjectList;
