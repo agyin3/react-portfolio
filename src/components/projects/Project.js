@@ -1,6 +1,7 @@
 import { Box, Slide } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import PortfolioContext from "../../context/PortfolioContext";
 import { ProjectImage } from "./ProjectImg";
 import ProjectText from "./ProjectText";
 
@@ -15,8 +16,9 @@ const ProjectContainer = withStyles({
   },
 })(Box);
 
-const Project = ({ proj, scrollPos, idx }) => {
+const Project = ({ proj, idx }) => {
   const projectRef = useRef();
+  const { scrollPos } = useContext(PortfolioContext);
   const [animPosition, setAnimPosition] = useState(0);
 
   useEffect(() => {
