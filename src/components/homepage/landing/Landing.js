@@ -20,7 +20,7 @@ const LandingWrapper = withStyles({
 
 const Landing = () => {
   return (
-    <LandingWrapper>
+    <LandingWrapper id="home">
       <HeroImg
         mobileImage={mobileBg1}
         desktopImage={desktopBg1}
