@@ -1,20 +1,50 @@
-import { Box, Hidden, Link } from "@material-ui/core";
+import { Box, Hidden, Link as MuiLink } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import theme from "../../styles/theme";
 import React, { memo } from "react";
+import { Link } from "react-scroll";
+import "./header.css";
 
 const MenuLink = withStyles({
   root: {
     fontFamily: "Montserrat, cursive",
     fontSize: "2.4em",
     color: theme.palette.secondary.light,
+    textDecoration: "none",
     "&:hover": {
       fontWeight: 700,
       cursor: "pointer",
       color: theme.palette.secondary.main,
+      textDecoration: "underline",
     },
   },
-})(Link);
+})(({ classes, children, to }) => (
+  <Link
+    to={to}
+    activeClass="active"
+    spy={true}
+    smooth={true}
+    duration={750}
+    className={classes.root}
+  >
+    {children}
+  </Link>
+));
+
+const BlogLink = withStyles({
+  root: {
+    fontFamily: "Montserrat, cursive",
+    fontSize: "2.4em",
+    color: theme.palette.secondary.light,
+    textDecoration: "none",
+    "&:hover": {
+      fontWeight: 700,
+      cursor: "pointer",
+      color: theme.palette.secondary.main,
+      textDecoration: "underline",
+    },
+  },
+})(MuiLink);
 
 const LinkWrapper = withStyles({
   root: {
@@ -29,13 +59,13 @@ const LinkWrapper = withStyles({
 const NavLinks = memo(() => (
   <Hidden smDown>
     <LinkWrapper>
-      <MenuLink href="#home">Home</MenuLink>
-      <MenuLink href="#projects">Projects</MenuLink>
-      <MenuLink href="#about">About</MenuLink>
-      <MenuLink href="#contact">Contact</MenuLink>
-      <MenuLink href="https://buddyagyin.blog" target="_blank">
+      <MenuLink to="home">Home</MenuLink>
+      <MenuLink to="about">About</MenuLink>
+      <MenuLink to="projects">Projects</MenuLink>
+      <MenuLink to="contact">Contact</MenuLink>
+      <BlogLink href="https://buddyagyin.blog" target="_blank">
         Blog
-      </MenuLink>
+      </BlogLink>
     </LinkWrapper>
   </Hidden>
 ));

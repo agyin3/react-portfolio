@@ -17,7 +17,7 @@ const AboutWrapper = withStyles({
 })(Box);
 
 const About = () => (
-  <AboutWrapper>
+  <AboutWrapper id="about">
     <AboutImg />
     <AboutText />
   </AboutWrapper>
