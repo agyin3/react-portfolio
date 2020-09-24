@@ -2,16 +2,17 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Admin from "./components/admin/AdminController";
+import Homepage from "./components/homepage/Homepage";
 import WIP from "./pages/WIP";
 
 function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <WIP />
+        <Homepage />
       </Route>
       <Route path="/home">
-        <WIP />
+        <Homepage />
       </Route>
       <Route path="/admin">
         <Admin />

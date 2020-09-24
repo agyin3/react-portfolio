@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
 export const ProjectImage = styled.img`
-  width: 35%;
+  width: 90%;
+
+  @media (min-width: 1000px) {
+    width: 35%;
+  }
 `;
