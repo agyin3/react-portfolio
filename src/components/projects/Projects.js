@@ -24,34 +24,7 @@ const ProjectsWrapper = withStyles({
 })(Box);
 
 const Projects = memo(() => {
-  const { setLoading } = useContext(PortfolioContext);
-  const [projects, setProjects] = useState([]);
-
-  const fetchProjects = useCallback(async () => {
-    setLoading(true);
-    try {
-      const res = await API.get("/projects");
-
-      // Only need to set favorite projects to state here
-      const favorites = await res.data.projects
-        .filter((proj) => proj.favorite)
-        // Need to split up string into an array
-        // In order to map over them in ProjectCard component
-        .map((proj) => {
-          return { ...proj, languages: proj.languages.split(",") };
-        });
-
-      setProjects(favorites);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(true);
-    }
-  }, [setLoading]);
-
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
+  const { projects } = useContext(PortfolioContext);
 
   return (
     <ProjectsWrapper id="projects">

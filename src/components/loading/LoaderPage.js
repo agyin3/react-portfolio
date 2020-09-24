@@ -1,15 +1,24 @@
-import React from 'react'
-import { SimpleContainer } from '../../styled-components'
-import LottieLoader from './LottieLoader'
-import loader from "../../utils/loader.json"
+import React from "react";
+import LottieLoader from "../../utils/LottieLoader";
+import loader from "../../utils/loader.json";
+import theme from "../../styles/theme";
+import { Box } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+
+const SimpleContainer = withStyles({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    background: theme.palette.primary.main,
+  },
+})(Box);
 
 const LoaderPage = () => (
-    <SimpleContainer
-    background='#30323d'
-    color='#F9C2DC'
-    >
-        <LottieLoader lottie={loader} />
-    </SimpleContainer>
-)
+  <SimpleContainer>
+    <LottieLoader lottie={loader} />
+  </SimpleContainer>
+);
 
-export default LoaderPage
+export default LoaderPage;
