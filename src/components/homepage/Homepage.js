@@ -8,6 +8,7 @@ import Projects from "../projects/Projects";
 import Landing from "./landing/Landing";
 import LoaderPage from "../loading/LoaderPage";
 import API from "../../utils/API";
+import ToTop from "./scroll_to_top/ToTop";
 
 const Homepage = () => {
   const [scrollPos, setScrollPos] = useState(0);
@@ -76,6 +77,7 @@ const Homepage = () => {
             <Landing />
             <About />
             <Projects />
+            <ToTop />
             <Footer />
           </>
         )}
