@@ -6,12 +6,18 @@ import FooterLinks from "./FooterLinks";
 
 const FooterContainer = withStyles({
   root: {
-    height: "10vh",
+    minHeight: "10vh",
     display: "flex",
+    flexDirection: "column-reverse",
     justifyContent: "space-between",
     alignItems: "center",
     background: theme.palette.primary.light,
     padding: "2rem",
+
+    "@media (min-width: 1000px)": {
+      flexDirection: "row",
+      padding: "2rem",
+    },
   },
 })(({ classes, children }) => (
   <footer id="contact" className={classes.root}>

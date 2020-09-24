@@ -9,10 +9,14 @@ const ProjectContainer = withStyles({
   root: {
     display: "flex",
     alignItems: "center",
+    flexDirection: "column",
     justifyContent: "space-between",
     padding: "10% 1rem",
     width: "90%",
     margin: "0 auto",
+    "@media (min-width: 1000px)": {
+      flexDirection: "row",
+    },
   },
 })(Box);
 

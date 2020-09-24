@@ -7,12 +7,18 @@ import AboutText from "./AboutText";
 
 const AboutWrapper = withStyles({
   root: {
-    height: "100vh",
+    minHeight: "100vh",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-around",
     background: theme.palette.primary.main,
+    padding: "5rem 0",
+
+    "@media (min-width: 1000px)": {
+      flexDirection: "row",
+      padding: "0",
+    },
   },
 })(Box);
 

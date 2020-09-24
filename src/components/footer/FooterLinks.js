@@ -10,6 +10,11 @@ const LinkContainer = withStyles({
     justifyContent: "space-between",
     alignItems: "center",
     width: "40%",
+    margin: "0 0 1rem",
+
+    "@media (min-width: 1000px)": {
+      margin: "0",
+    },
   },
 })(Box);
 

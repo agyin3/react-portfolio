@@ -17,9 +17,12 @@ const TextContainer = withStyles({
   root: {
     display: "flex",
     flexDirection: "column",
-    height: "60%",
+    minHeight: "60%",
     justifyContent: "space-between",
-    maxWidth: "55vw",
+    maxWidth: "90vw",
+    "@media (min-width: 1000px)": {
+      maxWidth: "55vw",
+    },
   },
 })(Box);
 
