@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PortfolioProvider } from "../../context/PortfolioContext";
 import About from "../about/About";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Projects from "../projects/Projects";
 import Landing from "./landing/Landing";
@@ -23,6 +24,7 @@ const Homepage = () => {
         <Landing />
         <About scrollPos={scrollPos} />
         <Projects scrollPos={scrollPos} />
+        <Footer />
       </PortfolioProvider>
     </div>
   );
