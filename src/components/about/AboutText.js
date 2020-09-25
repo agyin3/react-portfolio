@@ -53,15 +53,21 @@ const AboutText = () => {
           Back End: <Text>Node | Python | Postgres | MongoDb</Text>
         </Heading>
         <Heading component="p">
-          Interests: <Text>Coffee | Lakers | Terrible Scary Movies</Text>
+          Interests:{" "}
+          <Text>
+            Coffee | Lakers | Terrible Scary Movies | Abstract Art | Craft Beer
+          </Text>
         </Heading>
         <Heading component="p">
           About Me:{" "}
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor
-            morbi non arcu risus quis varius quam. Porttitor leo a diam
-            sollicitudin tempor id eu nisl.
+            I am a Full Stack Engineer based in Salt Lake City, Utah. I really
+            enjoy working with codebases utilizng both MERN & PERN tech stacks
+            but my true passion lies in designing and creating database
+            structures and custom APIs. I'm currently open and ready to join an
+            awesome team of developers working on creating innovative solutions
+            within the sports, social, environmental, and entertainment
+            industries.
           </Text>
         </Heading>
       </TextContainer>

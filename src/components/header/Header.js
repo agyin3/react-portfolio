@@ -20,8 +20,13 @@ const Header = React.memo(() => {
       <TopBar position="fixed">
         <Toolbar variant="dense">
           <Hidden mdUp>
-            <IconButton onClick={toggleDrawer} size="medium" fontSize="large">
-              <MenuIcon fontSize="large" />
+            <IconButton
+              color="secondary"
+              onClick={toggleDrawer}
+              size="medium"
+              fontSize="large"
+            >
+              <MenuIcon color="secondary" fontSize="large" />
             </IconButton>
           </Hidden>
           <NavLinks />
