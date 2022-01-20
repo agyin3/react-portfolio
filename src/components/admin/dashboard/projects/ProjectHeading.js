@@ -6,84 +6,84 @@ import React, { useCallback } from "react";
 import API from "../../../../utils/API";
 
 const HeadingContainer = withStyles({
-  root: {
-    width: "100%",
-    height: "20%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    root: {
+        width: "100%",
+        height: "20%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 })(Box);
 
 const ProjectHeading = (props) => {
-  const { fetchProjects } = props;
-  const { id, favorite, name } = props.project;
+    const { fetchProjects } = props;
+    const { _id, favorite, name } = props.project;
 
-  const updateFav = useCallback(
-    async (e, id) => {
-      e.preventDefault();
+    const updateFav = useCallback(
+        async (e, _id) => {
+            e.preventDefault();
 
-      try {
-        // PUT request toggle favorite
-        await API.put(`/projects/${id}`, { favorite: !favorite });
+            try {
+                // PUT request toggle favorite
+                await API.put(`/projects/${_id}`, { favorite: !favorite });
 
-        // re-call fetchProjects to get updated list of projects
-        fetchProjects();
-      } catch (err) {
-        // NEED TO ADD PROPER ERROR HANDLING
-        console.log("There was an error", err.response);
-      }
-    },
-    [favorite, fetchProjects]
-  );
+                // re-call fetchProjects to get updated list of projects
+                fetchProjects();
+            } catch (err) {
+                // NEED TO ADD PROPER ERROR HANDLING
+                console.log("There was an error", err.response);
+            }
+        },
+        [favorite, fetchProjects]
+    );
 
-  const deleteProj = useCallback(
-    async (e, id) => {
-      e.preventDefault();
+    const deleteProj = useCallback(
+        async (e, _id) => {
+            e.preventDefault();
 
-      try {
-        // DELETE request to delete image
-        await API.delete(`/projects/${id}`);
+            try {
+                // DELETE request to delete image
+                await API.delete(`/projects/${_id}`);
 
-        // re-call fetchProjects to get updated list of projects
-        fetchProjects();
-      } catch (err) {
-        // NEED TO ADD PROPER ERROR HANDLING
-        console.log("There was an error delete: ", err.response);
-      }
-    },
-    [fetchProjects]
-  );
+                // re-call fetchProjects to get updated list of projects
+                fetchProjects();
+            } catch (err) {
+                // NEED TO ADD PROPER ERROR HANDLING
+                console.log("There was an error delete: ", err.response);
+            }
+        },
+        [fetchProjects]
+    );
 
-  return (
-    <HeadingContainer>
-      <Typography variant="h3" component="h2">
-        {name}
-      </Typography>
-      <Box>
-        {favorite ? (
-          <Favorite
-            onClick={(e) => updateFav(e, id)}
-            fontSize="large"
-            style={{ color: red[700] }}
-          />
-        ) : (
-          <FavoriteBorder
-            onClick={(e) => updateFav(e, id)}
-            fontSize="large"
-            style={{ color: red[700] }}
-          />
-        )}
+    return (
+        <HeadingContainer>
+            <Typography variant="h3" component="h2">
+                {name}
+            </Typography>
+            <Box>
+                {favorite ? (
+                    <Favorite
+                        onClick={(e) => updateFav(e, _id)}
+                        fontSize="large"
+                        style={{ color: red[700] }}
+                    />
+                ) : (
+                    <FavoriteBorder
+                        onClick={(e) => updateFav(e, _id)}
+                        fontSize="large"
+                        style={{ color: red[700] }}
+                    />
+                )}
 
-        <Delete
-          onClick={(e) => deleteProj(e, id)}
-          fontSize="large"
-          style={{ color: lime[500] }}
-        />
-      </Box>
-    </HeadingContainer>
-  );
+                <Delete
+                    onClick={(e) => deleteProj(e, _id)}
+                    fontSize="large"
+                    style={{ color: lime[500] }}
+                />
+            </Box>
+        </HeadingContainer>
+    );
 };
 
 export default ProjectHeading;
