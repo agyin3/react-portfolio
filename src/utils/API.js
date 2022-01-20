@@ -1,9 +1,9 @@
- import axios from 'axios'
+import axios from "axios";
 
- export default axios.create({
-     baseURL: process.env.REACT_APP_BASE_DB_URL,
-     headers: {
-         authorization: localStorage.getItem("token")
-     },
-     responseType: 'json'
- })
+export default axios.create({
+    baseURL: process.env.REACT_APP_BASE_DB_URL,
+    headers: {
+        authorization: localStorage.getItem("token"),
+    },
+    responseType: "json",
+});
