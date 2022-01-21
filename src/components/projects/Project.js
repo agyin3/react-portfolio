@@ -1,4 +1,4 @@
-import { Box, Slide } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import PortfolioContext from "../../context/PortfolioContext";

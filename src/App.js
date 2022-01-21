@@ -3,22 +3,21 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Admin from "./components/admin/AdminController";
 import Homepage from "./components/homepage/Homepage";
-import WIP from "./pages/WIP";
 
 function App() {
-  return (
-    <Switch>
-      <Route exact path="/">
-        <Homepage />
-      </Route>
-      <Route path="/home">
-        <Homepage />
-      </Route>
-      <Route path="/admin">
-        <Admin />
-      </Route>
-    </Switch>
-  );
+    return (
+        <Switch>
+            <Route exact path="/">
+                <Homepage />
+            </Route>
+            <Route path="/home">
+                <Homepage />
+            </Route>
+            <Route path="/admin">
+                <Admin />
+            </Route>
+        </Switch>
+    );
 }
 
 export default App;
